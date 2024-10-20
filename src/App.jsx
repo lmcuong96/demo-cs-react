@@ -1,5 +1,6 @@
 import { cs,State } from "cs-react";
 import {ParentComp} from "./ParentComp.jsx";
+import Counter from "./counter.jsx";
 
 const App = () => cs(
     ["count", ({}, next) => State({initValue: 0, next})],
@@ -14,6 +15,7 @@ const App = () => cs(
                 <button onClick={() => count.change(v=> v-1)}>-</button>
             </div>
             <ParentComp/>
+            <Counter/>
         </div>
     ),
 );
